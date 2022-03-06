@@ -12,4 +12,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onUserDetailsEvent(event: any) {
+    console.log(`event: : ${event}`)
+  }
+
 }

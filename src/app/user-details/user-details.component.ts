@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-user-details',
@@ -15,8 +15,11 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  @Output() notify = new EventEmitter();
+
   onLoginClicked() {
-    console.log(`UserDetailsComponent : onLoginClicked()`)
+    console.log(`UserDetailsComponent : onLoginClicked()`);
+    this.notify.emit("UserDetails Component : emit value")
   }
 
 }
